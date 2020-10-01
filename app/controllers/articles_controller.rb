@@ -27,6 +27,7 @@ class ArticlesController < ApplicationController
   end
 
   def update  
+    # In rails console >Article.update_all(user_id: User.first.id)
     if @article.update(article_params)
       flash[:notice] = "Article was updated successfully"
       redirect_to @article
